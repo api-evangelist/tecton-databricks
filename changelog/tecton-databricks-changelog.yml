@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.tecton.ai/whats-new/
+scheme: semver
+current_version: 1.2.13
+docs: https://www.tecton.ai/whats-new/
+notes: >-
+  Tecton maintains an actively-updated "What's New" changelog. Recent entry dates captured
+  below (entry titles not machine-extractable from the page at capture time; see source URL
+  for full highlights). SDK versions follow semantic versioning (current 1.2.x on PyPI).
+entries:
+  - date: '2026-07-20'
+    source: https://www.tecton.ai/whats-new/
+  - date: '2026-07-17'
+    source: https://www.tecton.ai/whats-new/
+  - date: '2026-07-16'
+    source: https://www.tecton.ai/whats-new/
+  - date: '2026-07-07'
+    source: https://www.tecton.ai/whats-new/
+  - date: '2026-06-30'
+    source: https://www.tecton.ai/whats-new/
+  - date: '2026-06-16'
+    source: https://www.tecton.ai/whats-new/

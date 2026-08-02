@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.tecton.ai/http-api
+format: http-status
+envelope: JSON body with an error message; HTTP status carries the semantic class.
+problems:
+  - status: 400
+    title: Bad Request
+    detail: Invalid inputs - missing required join keys, missing request context keys, join-key type mismatch, batch size exceeding limits, or invalid JSON request body.
+  - status: 401
+    title: Unauthorized
+    detail: Invalid 'Tecton-key' authorization header or malformed API key. Newly created credentials can take up to 60 seconds to activate.
+  - status: 403
+    title: Forbidden
+    detail: Insufficient permissions for the Feature Service; the Service Account lacks Consumer/Editor privileges. Permission changes take up to 60 seconds.
+  - status: 404
+    title: Not Found
+    detail: Feature Service, workspace, stream source, or DynamoDB table not found, or Feature Views lack materialized data.
+  - status: 409
+    title: Conflict
+    detail: Duplicate resource in SCIM provisioning operations.
+  - status: 429
+    title: Resources Exhausted
+    detail: Concurrent request limit exceeded, DynamoDB throttling, or provisioned throughput exceeded.
+  - status: 500
+    title: Internal Server Error
+    detail: Tecton system error.
+  - status: 503
+    title: Service Unavailable
+    detail: Online Store is unavailable or the Tecton feature-server deployment is down.
+  - status: 504
+    title: Gateway Timeout
+    detail: Request timed out (2-second serving limit).
+success_codes:
+  - status: 200
+    detail: Successful request.
+  - status: 201
+    detail: Resource created (SCIM endpoints).
+  - status: 204
+    detail: Successful deletion (no content).

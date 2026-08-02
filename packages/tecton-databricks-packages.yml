@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://pypi.org/project/tecton/ ; https://github.com/tecton-ai
+packages:
+  - language: python
+    registry: pypi
+    name: tecton
+    url: https://pypi.org/project/tecton/
+    install: pip install tecton
+    version: 1.2.13
+    official: true
+    description: Tecton Python SDK for defining, testing, and managing feature pipelines and services; bundles the `tecton` CLI.
+  - language: python
+    registry: pypi
+    name: tecton-client
+    url: https://pypi.org/project/tecton-client/
+    install: pip install tecton-client
+    version: 0.4.0
+    official: true
+    description: Lightweight Python client for the Tecton Feature Service HTTP API (low-latency online feature retrieval).
+    repo: https://github.com/tecton-ai/tecton-http-client-python
+  - language: java
+    registry: github
+    name: tecton-http-client-java
+    url: https://github.com/tecton-ai/tecton-http-client-java
+    official: true
+    description: Tecton Online Store Java client for the Feature Service HTTP API.
+  - language: python
+    registry: pypi
+    name: airflow-provider-tecton
+    url: https://pypi.org/project/airflow-provider-tecton/
+    install: pip install airflow-provider-tecton
+    official: true
+    description: Apache Airflow provider for orchestrating Tecton materialization and jobs.
+    repo: https://github.com/tecton-ai/airflow-provider-tecton
+  - language: hcl
+    registry: terraform
+    name: tecton-ai/tecton
+    url: https://registry.terraform.io/providers/tecton-ai/tecton
+    official: true
+    description: Terraform provider for managing Tecton resources as infrastructure-as-code.
+    repo: https://github.com/tecton-ai/terraform-provider-tecton

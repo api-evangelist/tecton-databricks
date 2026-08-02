@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.tecton.ai/docs/beta/setting-up-tecton/administration-setup/programmatic-access-using-service-accounts
+docs: https://docs.tecton.ai/http-api
+summary:
+  types: [apiKey, oauth2]
+  api_key_in: [header]
+  oauth2_flows: [clientCredentials]
+schemes:
+  - name: TectonKey
+    type: apiKey
+    in: header
+    header: Authorization
+    format: 'Authorization: Tecton-key <YOUR-API-KEY>'
+    description: >-
+      API-key authentication for the Feature Service HTTP API. The key is passed as an
+      Authorization header with the "Tecton-key" prefix. Keys are issued to Service
+      Accounts; newly created credentials can take up to 60 seconds to activate.
+    docs: https://docs.tecton.ai/http-api
+  - name: ServiceAccountOAuth
+    type: oauth2
+    flow: clientCredentials
+    description: >-
+      Service Accounts authenticate with OAuth 2.0 Client Credentials. The Service Account ID
+      and an active client secret are exchanged at the tokens endpoint (scope "everything")
+      for an access token, which is then used to call Tecton APIs. Client Credentials cannot
+      call Tecton APIs directly; they must first be exchanged for an access token.
+    scopes:
+      - everything
+    docs: https://docs.tecton.ai/docs/beta/setting-up-tecton/administration-setup/programmatic-access-using-service-accounts
+notes: >-
+  Authorization is role-based - Service Accounts require Consumer/Editor privileges on a
+  Feature Service (a 403 "Not Authorized" is returned otherwise). SCIM 2.0 is supported for
+  user/group provisioning.

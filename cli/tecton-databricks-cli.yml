@@ -1,0 +1,24 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.tecton.ai/docs/cli
+cli:
+  name: tecton
+  official: true
+  distribution: Bundled with the `tecton` Python SDK (pip install tecton).
+  docs: https://docs.tecton.ai/docs/cli
+  install: pip install tecton
+  auth: tecton login  (authenticates the CLI against a Tecton deployment; API-key / Service-Account driven)
+  command_groups:
+    - group: workspace
+      purpose: Create, list, select, and delete Tecton workspaces.
+    - group: apply / plan / destroy
+      purpose: Diff and apply the feature repository (feature views/services/data sources) to a workspace, GitOps-style.
+    - group: login / logout
+      purpose: Authenticate the CLI to a Tecton cluster.
+    - group: api-key
+      purpose: Create, list, and deactivate API keys / Service Account credentials.
+    - group: service-account
+      purpose: Manage Service Accounts and their permissions.
+    - group: materialization
+      purpose: Inspect and trigger feature materialization jobs.
+  notes: Command surface summarized from the CLI reference; the `tecton` binary is catalogued in packages/tecton-databricks-packages.yml.

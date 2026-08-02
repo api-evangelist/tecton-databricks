@@ -1,8 +1,27 @@
 aid: tecton-databricks
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tecton-databricks.png
 name: Tecton (Databricks)
-description: 'Tecton (Databricks) is a company surfaced as a portfolio company of bain-capital-ventures
-  and added to the API Evangelist network as a stub for enrichment. Sector: ai-infrastructure. This profile
-  is a lead awaiting the enrichment pipeline.'
+description: >-
+  Tecton is a feature platform (feature store) for machine learning and AI. It lets data and
+  ML teams define feature transformations once and run them across batch, streaming, and
+  real-time data sources, then materialize and serve those features from a low-latency online
+  store. Features are authored in Python and managed GitOps-style via the tecton CLI and SDK,
+  and consumed at inference time over the Feature Service HTTP API (Authorization: Tecton-key,
+  or Service-Account OAuth). Tecton also ships an Ingest API, a Metadata API, an official MCP
+  server, and Java/Python clients. The company was acquired by Databricks in August 2025 and
+  its platform now powers real-time features and context serving for AI agents.
 url: https://raw.githubusercontent.com/api-evangelist/tecton-databricks/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +31,31 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
 - Ai Infrastructure
-apis: []
+- Feature Store
+- Feature Platform
+- Machine Learning
+- MLOps
+- Real Time
+- Databricks
+apis:
+- name: Tecton HTTP API
+  description: >-
+    REST API for the Tecton feature platform - the Feature Service (low-latency online
+    feature retrieval, e.g. POST /api/v1/feature-service/get-features), the Ingest API,
+    the Metadata API, and SCIM 2.0 provisioning. Authenticated with an Authorization
+    Tecton-key header or a Service-Account OAuth access token. The runtime host is
+    per-deployment (https://<deployment>.tecton.ai); see the HTTP API reference.
+  humanURL: https://docs.tecton.ai/http-api
+  baseURL: https://docs.tecton.ai
+  properties:
+  - type: APIReference
+    url: https://docs.tecton.ai/http-api
+  - type: Authentication
+    url: authentication/tecton-databricks-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +64,56 @@ maintainers:
 common:
 - type: Website
   url: https://www.tecton.ai/
+- type: DeveloperPortal
+  url: https://docs.tecton.ai/
+- type: Documentation
+  url: https://docs.tecton.ai/
+- type: APIReference
+  url: https://docs.tecton.ai/http-api
+- type: GettingStarted
+  url: https://docs.tecton.ai/docs/tutorials/tecton-quick-start
+- type: Blog
+  url: https://www.tecton.ai/blog/
+- type: GitHubOrganization
+  url: https://github.com/tecton-ai
+- type: Support
+  url: https://support.tecton.ai/
+- type: TermsOfService
+  url: https://www.tecton.ai/terms-of-use/
+- type: PrivacyPolicy
+  url: https://www.tecton.ai/privacy-policy/
+- type: ChangeLog
+  url: https://www.tecton.ai/whats-new/
+- type: Compliance
+  url: https://docs.tecton.ai/docs/security
+- type: Packages
+  url: packages/tecton-databricks-packages.yml
+- type: SDKs
+  url: packages/tecton-databricks-packages.yml
+- type: CLI
+  url: cli/tecton-databricks-cli.yml
+- type: MCPServer
+  url: mcp/tecton-databricks-mcp.yml
+- type: LLMsTxt
+  url: llms/tecton-databricks-llms.txt
+- type: Authentication
+  url: authentication/tecton-databricks-authentication.yml
+- type: Conventions
+  url: conventions/tecton-databricks-conventions.yml
+- type: ErrorCatalog
+  url: errors/tecton-databricks-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/tecton-databricks-lifecycle.yml
+- type: ChangeLog
+  url: changelog/tecton-databricks-changelog.yml
+- type: Conformance
+  url: conformance/tecton-databricks-conformance.yml
+- type: TrustCenter
+  url: security/tecton-databricks-trust-center.yml
+- type: DomainSecurity
+  url: security/tecton-databricks-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v1

@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.tecton.ai/http-api
+authentication:
+  style: api-key-header
+  header: 'Authorization: Tecton-key <API-KEY>'
+  alt: OAuth 2.0 Client Credentials (Service Accounts) exchanged for an access token
+  ref: authentication/tecton-databricks-authentication.yml
+request:
+  format: JSON
+  feature_serving:
+    endpoint_example: POST /api/v1/feature-service/get-features
+    body: Requires join keys and request-context keys matching the Feature Service schema; supports batch requests (get-features-batch) with a documented batch-size limit.
+batching:
+  supported: true
+  note: Feature retrieval supports batch requests; exceeding the batch-size limit returns 400.
+error_handling:
+  envelope: JSON error message; HTTP status carries the class (400/401/403/404/429/500/503/504).
+  ref: errors/tecton-databricks-problem-types.yml
+  serving_timeout: 2 seconds (504 Gateway Timeout on exceed)
+idempotency:
+  documented: false
+  note: No provider-documented idempotency-key header. Online feature reads are effectively idempotent (read semantics); the Ingest API push is not documented as idempotent.
+rate_limiting:
+  signal: HTTP 429 Resources Exhausted on concurrent-request or provisioned-throughput limits.
+provisioning:
+  scim: SCIM 2.0 endpoints for user/group provisioning (201 Created / 409 Conflict).
+versioning:
+  ref: lifecycle/tecton-databricks-lifecycle.yml
+  scheme: semver (SDK), URI-path (/api/v1/) for the HTTP API.

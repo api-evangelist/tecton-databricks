@@ -1,0 +1,20 @@
+generated: '2026-07-21'
+method: searched
+source: https://www.tecton.ai/whats-new/ ; https://pypi.org/project/tecton/
+versioning:
+  sdk_scheme: semver
+  sdk_current: 1.2.13
+  http_api_scheme: uri-path
+  http_api_current: v1
+  docs: https://docs.tecton.ai/http-api
+changelog:
+  url: https://www.tecton.ai/whats-new/
+  artifact: changelog/tecton-databricks-changelog.yml
+deprecation:
+  policy_url: null
+  note: No standalone published deprecation policy page located; SDK follows semantic versioning with periodic release notes on the What's New page.
+status_page: null
+sla:
+  url: null
+  note: SLA governed by enterprise agreement; no public status page located.
+deprecated_operations: []

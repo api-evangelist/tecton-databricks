@@ -1,0 +1,25 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.tecton.ai/http-api ; https://docs.tecton.ai/docs/beta/setting-up-tecton/administration-setup/programmatic-access-using-service-accounts
+standards:
+  - id: scim2
+    conforms: true
+    evidence: SCIM 2.0 provisioning endpoints documented (201 Created / 409 Conflict for user/group provisioning).
+  - id: oauth2-client-credentials
+    conforms: true
+    evidence: Service Accounts use OAuth 2.0 Client Credentials exchanged at the tokens endpoint for an access token.
+  - id: api-key-header
+    conforms: true
+    evidence: Feature Service HTTP API uses the Authorization Tecton-key header scheme.
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: Errors are returned as JSON messages with HTTP status; application/problem+json not documented.
+  - id: openapi
+    conforms: false
+    evidence: No public OpenAPI/Swagger document found for the HTTP API.
+compliance_programs:
+  certifications:
+    - SOC 2 Type II
+    - ISO 27001
+    - GDPR (DPA)
+  source: https://docs.tecton.ai/docs/security
