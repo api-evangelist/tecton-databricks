@@ -10,17 +10,24 @@ server:
   install: git clone https://github.com/tecton-ai/tecton-mcp.git
   run: uv --directory <path> run mcp run src/tecton_mcp/mcp_server/server.py
   requires:
-    - uv package manager
-    - TECTON_API_KEY (for the metrics tool)
-  notes: Official Tecton MCP server. Locally deployed as a subprocess in MCP clients (Cursor, Claude Code); no hosted/remote URL published.
+  - uv package manager
+  - TECTON_API_KEY (for the metrics tool)
+  notes: Official Tecton MCP server. Locally deployed as a subprocess in MCP clients (Cursor, Claude Code);
+    no hosted/remote URL published.
 tools:
-  - name: query_example_code_snippet_index_tool
-    description: Locate relevant Tecton code patterns via vector search over an example-snippet index.
-  - name: query_documentation_index_tool
-    description: Retrieve Tecton documentation snippets relevant to a query.
-  - name: get_full_tecton_sdk_reference_tool
-    description: Fetch the complete Tecton SDK reference.
-  - name: query_tecton_sdk_reference_tool
-    description: Retrieve targeted information about specific Tecton SDK components.
-  - name: query_tecton_metrics_tool
-    description: Access the Tecton Metrics API (requires TECTON_API_KEY).
+- name: query_example_code_snippet_index_tool
+  description: Locate relevant Tecton code patterns via vector search over an example-snippet index.
+- name: query_documentation_index_tool
+  description: Retrieve Tecton documentation snippets relevant to a query.
+- name: get_full_tecton_sdk_reference_tool
+  description: Fetch the complete Tecton SDK reference.
+- name: query_tecton_sdk_reference_tool
+  description: Retrieve targeted information about specific Tecton SDK components.
+- name: query_tecton_metrics_tool
+  description: Access the Tecton Metrics API (requires TECTON_API_KEY).
+deployment:
+  mode: local-stdio
+  verified: searched
+  tools: 5
+  checked: '2026-08-12'
+  source: catalog MCP census
