@@ -138,3 +138,5 @@ x-enrichment:
   status: enriched
   artifacts_added: 13
   pass: local-v1
+x-parent: tecton
+x-relationship: product
