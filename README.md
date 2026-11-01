@@ -64,6 +64,101 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Tecton (Databricks) is a company surfaced as a portfolio company of bain-capital-ventures and added to the API Evangelist network as a stub for enrichment. Sector: ai-infrastructure. This profile is a lead awaiting the enrichment pipeline.
+Tecton is a feature platform (feature store) for machine learning and AI. It lets data and ML teams define feature transformations once and run them across batch, streaming, and real-time data sources, then materialize and serve those features from a low-latency online store. Features are authored in Python and managed GitOps-style via the tecton CLI and SDK, and consumed at inference time over the Feature Service HTTP API (Authorization: Tecton-key, or Service-Account OAuth). Tecton also ships an Ingest API, a Metadata API, an official MCP server, and Java/Python clients. The company was acquired by Databricks in August 2025 and its platform now powers real-time features and context serving for AI agents.
 
-Backed by: bain-capital-ventures — https://www.tecton.ai/
+**Areas:** Company · AI Infrastructure · Feature Store · Feature Platform · Machine Learning · MLOps · Real-Time · Databricks
+
+## Tecton (Databricks) on APIs.io
+
+Everything profiled for Tecton (Databricks) is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/tecton-databricks/](https://apis.io/providers/tecton-databricks/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Tecton HTTP API](https://apis.io/apis/tecton-databricks/tecton-http-api/) — REST API for the Tecton feature platform - the Feature Service (low-latency online feature retrieval, e.g. POST /api/v1/feature-service/get-features), the…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [tecton-mcp](https://apis.io/servers/tecton-databricks/tecton-mcp/)
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Tecton Databricks Authentication](https://apis.io/security/tecton-databricks/tecton-databricks-authentication/)
+- [Tecton Databricks Domain Security](https://apis.io/security/tecton-databricks/tecton-databricks-domain-security/)
+- [Tecton Databricks Trust Center](https://apis.io/security/tecton-databricks/tecton-databricks-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.tecton.ai/)
+- [Documentation](https://docs.tecton.ai/)
+- [Getting started](https://docs.tecton.ai/docs/tutorials/tecton-quick-start)
+- [API reference](https://docs.tecton.ai/http-api)
+- [Support](https://support.tecton.ai/)
+- [Changelog](https://www.tecton.ai/whats-new/)
+- [Blog](https://www.tecton.ai/blog/)
+- [Compliance](https://docs.tecton.ai/docs/security)
+- [Terms of service](https://www.tecton.ai/terms-of-use/)
+- [Privacy policy](https://www.tecton.ai/privacy-policy/)
+- [GitHub](https://github.com/tecton-ai)
+
+## API Evangelist rating
+
+**Kin Score 35.2** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 71.7 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 71.4 |
+| Access clarity | 36.8 |
+
+**Agent readiness 8.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 27.3** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/tecton-databricks/](https://apis.io/providers/tecton-databricks/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Tecton (Databricks): the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/tecton-databricks/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
